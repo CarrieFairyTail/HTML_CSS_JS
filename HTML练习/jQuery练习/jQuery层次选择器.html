@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>层次选择器</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//1.父子 派生选择器(用得比较多)
+			$('div span').css('color','red');
+			//2.父子 直接子元素选择器
+			$('div > span').css('background-color','#999');
+			//3.兄弟 直接兄弟选择器
+			$('div + span').css('color','yellow');
+			//4.兄弟 后续全部兄弟关系节点选择器
+			$('div ~ span').css('background-color','yellow');
+
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<div>洛奇</div>
+		<span>
+			<div>小甜甜</div>
+		</span>
+		<div>纳兹</div>
+	</div>
+	<span>格雷</span>
+	<span>朱比亚</span>
+	<div>艾尔撒</div>
+	<span>米拉尔</span>
+	<input type="button" name="change" value="change" onclick="f1()">
+</body>
+</html>

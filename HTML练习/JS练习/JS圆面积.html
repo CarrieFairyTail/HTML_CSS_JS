@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圆面积和比大小</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// do while循环
+	// do{
+	// 	var msg = prompt("你爱不爱我？(y/n)");
+	// 	if (msg===y) {
+	// 		console.log("我们形影不离");
+	// 		break;
+	// 	}
+	// }while(true);
+
+	/**
+	 * 求圆的面积
+	 * @param r 圆的半径{[type]}
+	 * @return 圆的面积{[type]}
+	 */
+	function getArea(r){
+		//pi Math.PI
+		//Math.pow() 求平方
+		r = r || 0;//当r为null，undefind，空时值为0
+		return Math.PI * Math.pow(r, 2);
+	}
+
+	console.log(getArea(10));
+
+    /**
+     * 求两个数的最大值
+     * @param a {[type]}
+     * @param b {[type]}
+     * @return getMax1 {[type]}
+     */
+	function getMax1(a,b){
+		a=a||0;
+		b=b||0;
+		return a>b?a:b;
+	}
+	console.log(getMax1(2,9));
+
+    /**
+     * 求三个数的最大值，调用上一个函数
+     * @param  {[type]}
+     * @param  {[type]}
+     * @param  {[type]}
+     * @return {[type]}
+     */
+	function getMax2(a,b,c){
+		a=a||0;
+		b=b||0;
+		c=c||0;
+		var d=getMax1(a,b);
+		return getMax1(c,d);
+	}
+	console.log(getMax2(40,10,50));
+</script>
+</html>

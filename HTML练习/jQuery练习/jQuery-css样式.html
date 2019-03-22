@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css样式</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//获取
+			//行内 内部 外部样式都可以获得
+			//js的dom方式只能获得“行内”样式
+			console.log($('div').css("color"));
+			console.log($('div').css("width"));
+			console.log($('div').css("height"));
+			console.log($('div').css('border'));
+		}
+
+		function f2() {
+			//设置(会被设置为行内样式)
+			//有则修改，无则添加
+			$('div').css('font-size','40px');
+			$('div').css('border','5px solid yellow');
+		}
+
+		function f3() {
+			//设置多个样式
+			$('div').css({'font-size':'55px',color:'pink',height:'100px'});
+		}
+	</script>
+	<style type="text/css">
+		div{width: 300px;height: 200px;background-color: lightblue;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="01.css">
+</head>
+<body>
+	
+	<div style="color: red;">红红红火火</div>
+	<p>hello world</p>
+	<input type="button" name="" value="获取" onclick="f1()">
+	<input type="button" name="" value="设置" onclick="f2()">
+	<input type="button" name="" value="json批量修改" onclick="f3()">
+</body>
+</html>

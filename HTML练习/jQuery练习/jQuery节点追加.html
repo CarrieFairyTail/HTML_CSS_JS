@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点追加</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1(){
+			//主动
+			//父节点append()后置
+			$('#china').append('<li>胡歌</li>');//新节点
+			$('#china').append($('#唇齿上的605 li:eq(1)'));//已有节点追加(位置发生移动)
+			//父节点prepend()前置
+			$('#china').prepend('<li>乔振宇</li>');//新节点
+
+			//被动
+			//appendTo(父节点)
+			$('<li>张艺兴</li>').appendTo($('#china'));
+			//prependTo()
+			$('<li>吴磊</li>').prependTo($('#china'));
+			$('#gege').prependTo($('#china'));
+		}
+		function f2(){
+			//主动
+			//兄弟节点after()后置
+			$('#long').after('<li>凯莉</li>');//新节点
+			$('#唇齿上的605 li:first').after($('#liu'));//已有节点追加(位置发生移动)
+			//兄弟节点before()前置
+			$('#long').before('<li>白宇</li>');//新节点
+
+			//被动
+			//被追加节点.insertAfter(追加节点) 后置
+			$('<li>刘昊然</li>').insertAfter($('#gege'));//新节点
+			//insertBefore() 前置
+			$('<li>刘萌萌</li>').insertBefore($('#bai'));//新节点
+			//$('#gege').prependTo($('#china'));
+		}
+	</script>
+</head>
+<body>
+	<ul id="china">
+		<li id="long">朱一龙</li>
+		<li id="bai">白宇</li>
+		<li id="liu">刘昊然</li>
+	</ul>
+	<ul id="唇齿上的605">
+		<li id="gege">哥哥</li>
+		<li>紫薇</li>
+		<li>可依</li>
+		<li>引儿</li>
+	</ul>
+	<input type="button" name="" value="父子追加" onclick="f1()">
+	<input type="button" name="" value="兄弟追加" onclick="f2()">
+</body>
+</html>

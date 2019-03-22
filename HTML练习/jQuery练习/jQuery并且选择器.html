@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery并且选择器</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//1. :first 第一个 :last 最后一个
+			$('li:first').css('color','blue');
+			$('li:last').css('color','red');
+			//从零开始
+			//2.:eq(下标索引号)
+			$('li:eq(3)').css('color','red');
+			//3.:gt(索引号) great than节点索引值 大于 某个范围
+			//  :lt(索引号) less than节点索引值 小于 某个范围
+			$('li:gt(5)').css('color','yellow');
+			$('li:lt(4)').css('color','gray');
+			//4.:even 匹配到下标索引值为偶数的节点
+			//  :odd  匹配到下标索引值为奇数的节点
+			$('li:even').css('background-color','lightblue');
+			$('li:odd').css('background-color','lightgreen');
+			//5.:not(selector选择器)	去除某个节点  除了下面#lea以外其他都实现
+			$('li:not(#lea)').css('background-color','lightgreen');
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>辗转一生</li>
+		<li>蓦然回首</li>
+		<li>微微一笑</li>
+		<li id="lea">很倾城</li>
+		<li>忆一世</li>
+		<li>兄弟情</li>
+		<li>戒骄戒躁</li>
+		<li>未来可期</li>
+	</ul>
+	<input type="button" name="" value="change" onclick="f1()">
+</body>
+</html>

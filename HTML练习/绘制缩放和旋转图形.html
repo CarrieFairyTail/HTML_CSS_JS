@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制缩放效果的图</title>
+<script>
+function draw(id){
+	var canvas = document.getElementById(id);
+	if(canvas==null) return false;
+	var context = canvas.getContext('2d');
+	context.fillStyle = "#eeeeff";
+	context.fillRect(0,0,400,300);
+	context.translate(200,150)
+	context.fillStyle = 'rgba(255,0,0,0.25)';
+	for(var i=0;i<50;i++){
+		context.scale(3,0.5);//在x轴方向上增加为3倍宽，在y轴方向上变为原来的一半（图形缩放）
+		//context.rotate(Math.PI/10);<!--旋转角度参数以弧度为单位（旋转图形）>
+		context.fillRect(0,0,100,50);
+		}
+	}
+</script>
+</head>
+
+<body onLoad="draw('canvas')">
+<h1>图形缩放and旋转图形</h1>
+<canvas id="canvas" width="400" height="300" />
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制阴影图形</title>
+</head>
+
+<body>
+<canvas id="my canvas" width="200" height="200">
+style="border:1px solid #ff0000"
+</canvas>
+<script type="text/javascript">
+var elem=document.getElementById('my canvas');
+if(elem&&elem.getContext){
+	var context=elem.getContext("2d");
+	context.shadowOffsetX=20;//阴影的x的偏移量
+	context.shadowOffsetY=20;//阴影的y的偏移量
+	context.shadowBlur=100;//设置阴影模糊程度。此值越大，阴影越模糊
+	context.shadowColor='#000';//阴影颜色
+	context.fillStyle='#000';
+	context.fillRect(20,20,150,100);
+	}
+</script>
+</body>
+</html>

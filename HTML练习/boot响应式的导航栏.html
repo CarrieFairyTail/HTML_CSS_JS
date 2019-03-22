@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <title>Bootstrap 实例 - 响应式的导航栏</title>
+         <!-- 新 Bootstrap 核心 CSS 文件 -->
+         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+         
+         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+         <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+          
+         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+         <!-- nav标签创建一个默认的导航栏 role="navigation"有助于增加可访问性-->
+         <nav class="navbar navbar-default" role="navigation">
+            <!-- navbar-header添加一个标题 -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                  data-target="#example-navbar-collapse">
+                  <span class="sr-only">切换导航</span>
+                  <!-- 三个带有.icon-bar 的 span 创建所谓的汉堡按钮 -->
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <!-- 内部包含了带有 navbar-brand 的 a 元素。这会让文本看起来更大一号 -->
+               <a class="navbar-brand" href="#">W3Cschool</a>
+            </div>
+            <!-- 为了给导航栏添加响应式特性，包含在collapse navbar-collapse的div中 -->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+               <!-- 向导航栏添加链接，只需要简单地添加带有.nav、.navbar-nav 的无序列表即可 -->
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">iOS</a></li>
+                  <li><a href="#">SVN</a></li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Java <b class="caret"></b>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">jmeter</a></li>
+                        <li><a href="#">EJB</a></li>
+                        <li><a href="#">Jasper Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">分离的链接</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">另一个分离的链接</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </body>
+   </html>

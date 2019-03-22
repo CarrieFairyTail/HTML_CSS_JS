@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制火柴人</title>
+</head>
+
+<body>
+<!--定义画布-->
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid blue"></canvas>
+
+<script type="text/javascript">
+<!--实现头部轮廓绘制-->
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.beginPath();
+cxt.arc(100,50,30,0,Math.PI*2,true);//x,y的坐标为（100,50）半径为30像素，弧度的开始和结束，绘制弧形的方向（顺时针还是逆时针）
+cxt.fill();
+<!--用js绘制笑脸-->
+cxt.beginPath();
+cxt.strokeStyle='#c00';
+cxt.lineWidth=3;
+cxt.arc(100,50,20,0,Math.PI,false);
+cxt.stroke();
+<!--绘制眼睛-->
+cxt.beginPath();
+cxt.fillStyle="#c00";
+cxt.arc(90,45,3,0,Math.PI*2,true);//arc绘制左眼
+cxt.fill();
+cxt.moveTo(113,45);
+cxt.arc(110,45,3,0,Math.PI*2,true);//moveTo绘制右眼
+cxt.fill();
+cxt.stroke();
+<!--绘制身躯-->
+cxt.moveTo(100,80);//moveto作为开始坐标
+cxt.lineTo(100,150);//lineto作为终点
+cxt.moveTo(100,100);
+cxt.lineTo(60,120);
+cxt.moveTo(100,100);
+cxt.lineTo(140,120);
+cxt.moveTo(100,150);
+cxt.lineTo(80,190);
+cxt.moveTo(100,150);
+cxt.lineTo(140,190);
+cxt.stroke();
+</script>
+</body>
+</html>

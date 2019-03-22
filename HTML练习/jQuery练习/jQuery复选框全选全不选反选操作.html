@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框全选全不选反选</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function selAll() {
+			//全选    $('li').css('color','red')
+			$('.hby').attr('checked',true);
+			//以上css()/attr()方法都有批量处理效果
+			//在jQuery框架里边，大部分方法本身有“遍历机制”
+			//遍历同时会为每个dom对象都设置对应的(css)属性
+		}
+
+		function selnotAll() {
+			$('.hby').attr('checked',false);
+		}
+
+		function selfan() {
+			//有问题
+			//遍历全部的复选框，查看选中状态，选中设置不选中
+			$('.hby')
+			for (var i = 0; i < $('.hby').length; i++) {
+				var flag = $('.hby:eq('+i+')').attr('checked');//判断选中状态
+				$('.hby:eq('+i+')').attr('checked',!flag);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hby" name="hobby[]" value="1">篮球
+	<input type="checkbox" class="hby" name="hobby[]" value="2">组曲
+	<input type="checkbox" class="hby" name="hobby[]" value="3">羽毛
+	<input type="checkbox" class="hby" name="hobby[]" value="4">很多
+	<br>
+	<input type="button" name="" value="全选" onclick="selAll()">
+	<input type="button" name="" value="全不选" onclick="selnotAll()">
+	<input type="button" name="" value="反选" onclick="selfan()">
+</body>
+</html>

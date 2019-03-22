@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head>
+   <title>Bootstrap 实例 - 提示工具（Tooltip）插件</title>
+   <!-- 新 Bootstrap 核心 CSS 文件 -->
+   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+   
+   <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+   <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    
+   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head><body><h4>提示工具（Tooltip）插件 - 锚</h4>这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip" 
+   title="默认的 Tooltip">
+   默认的 Tooltip</a>.
+这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip" 
+   data-placement="left" title="左侧的 Tooltip">
+   左侧的 Tooltip</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="top" 
+   title="顶部的 Tooltip">
+   顶部的 Tooltip</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom" 
+   title="底部的 Tooltip">
+   底部的 Tooltip</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="right" 
+   title="右侧的 Tooltip">
+   右侧的 Tooltip</a>
+<h4>提示工具（Tooltip）插件 - 按钮</h4><button type="button" class="btn btn-default" data-toggle="tooltip" 
+   title="默认的 Tooltip">
+   默认的 Tooltip</button><button type="button" class="btn btn-default" data-toggle="tooltip" 
+   data-placement="left" title="左侧的 Tooltip">
+   左侧的 Tooltip</button><button type="button" class="btn btn-default" data-toggle="tooltip" 
+   data-placement="top" title="顶部的 Tooltip">
+   顶部的 Tooltip</button><button type="button" class="btn btn-default" data-toggle="tooltip" 
+   data-placement="bottom" title="底部的 Tooltip">
+   底部的 Tooltip</button><button type="button" class="btn btn-default" data-toggle="tooltip" 
+   data-placement="right" title="右侧的 Tooltip">
+   右侧的 Tooltip</button><script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });</script></body></html>

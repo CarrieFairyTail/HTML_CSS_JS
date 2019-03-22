@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>平铺图片</title>
+</head>
+
+<body onload="draw('canvas');">
+<h1>图片平铺</h1>
+<canvas id="canvas" width="2000" height="1000"></canvas>
+<script>
+function draw(id){
+	var canvas =document.getElementById(id);
+	if(canvas==null){
+		return false;
+		}
+		var context = canvas.getContext('2d');
+		context.fillStyle="#eef";
+		context.fillRect(0,0,800,600);
+		image=new Image();
+		image.src="麦田.jpg";
+		image.onload=function(){
+			var ptrn=context.createPattern(image,'repeat');//createPattern(image,type)type表示平铺的类型
+			context.fillStyle=ptrn;                         <!-- no-repeat 不平铺-->
+			context.fillRect(0,0,2000,1000);                <!-- repeat-x 横向平铺-->
+			}                                               <!-- repeat-y 纵向平铺-->
+	}                                                       <!-- repeat 全平铺-->
+</script>
+</body>
+</html>

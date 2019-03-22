@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>W3Cschool教程(w3cschool.cn)</title>
+<style type="text/css">
+#div1, #div2
+{float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)<!--规定了被拖动的数据-->
+{
+	ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();//来避免浏览器对数据的默认处理
+	var data=ev.dataTransfer.getData("Text");//获得被拖数据，该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<img src="/statics/images/w3c/logo.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"></div><!--为了使元素可拖动，把draggable属性设置为true-->
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>

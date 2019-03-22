@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图形的保存与恢复</title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="500" height="400" style="border:1px solid blue">
+your browser does not support the canvas element
+</canvas>
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="rgb(0,0,255)";
+ctx.save();                   //save方法把当前状态压入栈中
+ctx.fillRect(50,50,100,100);
+ctx.fillStyle="rgb(255,0,0)";
+ctx.save();
+ctx.fillRect(200,50,100,100);
+ctx.restore();                //restore方法从栈顶弹出状态
+ctx.fillRect(350,50,100,100);
+ctx.restore();
+ctx.fillRect(50,200,100,100);
+//restore可以比save少，但不能多
+</script>
+</body>
+</html>

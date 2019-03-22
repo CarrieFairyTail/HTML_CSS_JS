@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业2</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//在加载事件里边给option项目设置双击事件，被双击移动到对方
+		$().ready(function(){
+			//双击判断父级节点，再做节点跳转
+			$('option').dblclick(function(){
+				if (this.parentNode.id==='star') {
+					$(this).appendTo($('#people'));
+				}else{
+					$(this).appendTo($('#star'));
+				}
+			});
+		});
+		function toRight(){
+			$('#star option:selected').appendTo($('#people'));
+		}
+		function toAllRight(){
+			$('#star option').appendTo($('#people'));
+		}
+		function toLeft(){
+			$('#people option:selected').appendTo($('#star'));
+		}
+		function toAllLeft(){
+			$('#people option').appendTo($('#star'));
+		}
+	</script>
+	<style type="text/css">
+		select{
+			width: 100px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<select id="star" multiple="multiple">
+		<option value="">朱一龙</option>
+		<option value="">白宇</option>
+		<option value="">胡歌</option>
+		<option value="">刘昊然</option>
+	</select>
+	<select id="people" multiple="multiple">
+		<option value="">哥哥</option>
+		<option value="">紫薇</option>
+		<option value="">可依</option>
+		<option value="">引儿</option>
+	</select>
+	<br>
+	<input type="button" name="" value="右移" onclick="toRight()">
+	<input type="button" name="" value="全部右移" onclick="toAllRight()">
+	<input type="button" name="" value="左移" onclick="toLeft()">
+	<input type="button" name="" value="全部左移" onclick="toAllLeft()">
+</body>
+</html>

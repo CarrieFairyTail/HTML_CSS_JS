@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			// [name] 节点 必须有name属性
+			$('[size]').css('background-color','yellow');
+			//[name = value] 节点 必须有name属性，其值等于“value”
+			$('[size=30]').css('color','red');
+			//[name ^= value] 节点 必须有name属性，其值以value开始
+			$('[value ^=to]').css('font-size','27px');
+			//[name $= value] 节点 必须有name属性，其值以value结尾
+			$('[name $=63]').css('width','470px');
+			//[name!=value]
+			//节点如果有name属性，则其值不等于value
+			//节点如果没有name属性
+			$('[class!=orange]').css('background-color','gray');
+			//[name*=value]节点必须有name属性，其值必须出现value字样
+			$('[class*=an]').css('color','red')
+			//[][][][]并且关系，同时满足多个
+			$('input[size][value ^=t][name]').css('width','500px');
+		}
+	</script>
+</head>
+<body>
+	<input type="text" size="10" value="tom"><br>
+	<input type="text" size="30" name="useremail" value="tom@163.com"><br>
+	<input type="text" size="30" name="usertel" class="orange" value="111163"><br>
+	<input type="text" size="30" name="usereqq" class="pear" value="3446798"><br>
+
+	<input type="button" name="" value="触发" onclick="f1()">
+</body>
+</html>

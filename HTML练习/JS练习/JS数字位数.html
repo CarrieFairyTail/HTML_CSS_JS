@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算数字位数</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var number = parseInt(prompt("请输入数字")) ;
+
+	if (number) {
+		var i =1;
+		while(number>=10){
+			number = parseInt(number/10);
+			i++;
+		}
+		console.log("i");
+	}else if (number===0) {
+		console.log("1");
+	}else{
+		console.log("nonono")；
+	}
+
+</script>
+</html>

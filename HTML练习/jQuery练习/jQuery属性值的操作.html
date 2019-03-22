@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性值得操作</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//获取属性信息
+			console.log($('input:first').attr('type'));
+		}
+		function f2() {
+			//修改属性信息 input中禁止修改type 有些浏览器允许修改底层代码
+			$('input:first').attr('name','myname');
+		}
+		function f3() {
+			//删除属性信息 input中禁止修改type 
+			$('input:first').removeAttr('name');
+		}
+		function f4() {
+			//批量修改多个属性信息
+			var jn = {name:'itname',value:'haha',address:'shanghai'}
+			$('input:first').attr(jn);
+		}
+		function f5() {
+			//通过函数执行后return的返回值对属性进行修改赋值操作
+			$('input:first').attr('value',function(){
+				return 12+12;
+			});
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="username" value="tom" address="nanjing">
+	<input type="button" name="" value="获取" onclick="f1()">
+	<input type="button" name="" value="设置" onclick="f2()">
+	<input type="button" name="" value="删除" onclick="f3()">
+	<input type="button" name="" value="批量修改多个属性信息" onclick="f4()">
+	<input type="button" name="" value="函数修改属性" onclick="f5()">
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制图像</title>
+</head>
+
+<body>
+<canvas id="canvas" width="1024" height="500" style="border:1px solid blue">
+</canvas>
+
+<script type="text/javascript">
+window.onload=function(){//使用窗口的onload加载事件，即在页面被加载时执行函数
+	var ctx=document.getElementById("canvas").getContext("2d");//创建上下文对象
+	var img=new Image();
+	img.src="麦田.jpg";
+	img.onload=function(){
+		ctx.drawImage(img,0,0);//drawImage画出当前图像
+		//把画img 画到canvas（0,0）上
+		}
+	}
+</script>
+</body>
+</html>

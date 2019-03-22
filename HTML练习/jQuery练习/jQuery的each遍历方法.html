@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>each遍历</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//each()遍历方法
+		//1.遍历数组
+		//	for循环 for-in
+		//	$.each(数组，function(k下标,v值){})
+		var color = ['apple','orange','light'];
+		$.each(color,function (k,v) {
+			// 遍历的主体实现
+			console.log(k+"---"+v);
+		})
+		//2.遍历对象
+		// $.each(对象，function(k成员名称,v成员值){})
+		var cat = {name:'kitty',color:'white',climb:function(){console.log('爬树')}};
+		$.each(cat,function (k,v) {
+			// 遍历的主体实现
+			console.log(k+"---"+v);
+		})
+		//3.遍历jQuery对象
+		var clr = ['red','blue','pink','yellow']
+		window.onload = function(){
+			//$.each(function(k-dom对象下标,v--dom对象){})
+			$('li').each(function(k,v){
+				console.log(k+"---"+v);
+				//this关键字在当前位置代表每个li的dom对象
+				//在jQuery内部使用的时候，就是代表dom对象
+				console.log(this);//依次代表每个li的dom对象
+				this.style.color = "blue";
+				//随机产生颜色
+				$(this).css('background-color',clr[Math.floor(Math.random()*4)]);
+
+				//v.style.color = "blue"; //dom对象进行样式设置
+				//$(v).css('background-color','lightgreen');//dom对象变成jQuery对象
+			})
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>上海</li>
+		<li>南京</li>
+		<li>滨江</li>
+		<li>大疆</li>
+	</ul>
+</body>
+</html>

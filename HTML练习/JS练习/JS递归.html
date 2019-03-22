@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	//求1-n的累积
+	function f1(n){
+		if (n===1) {
+			return 1;
+		}
+		return n*f1(n-1);
+	}
+
+	console.log(f1(5));
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <title>Bootstrap 实例 - 响应式的导航栏</title>
+         <!-- 新 Bootstrap 核心 CSS 文件 -->
+         <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+         
+         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+         <!-- <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script> -->
+          
+         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+         <!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        <style>
+            .fl{
+                float: left;
+            }
+            .fr{
+                float: right;
+            }
+            .total{
+                width: auto;
+                height: 100px;
+                
+            }
+            .first{
+
+            }
+            .first-in{
+                width: 100px;
+                height: 100px;
+                background-color: aquamarine;
+            }
+            .second{
+
+            }
+            .third{
+
+            }
+            .third-in{
+                width: 100px;
+                height: 100px;
+                background-color: rgb(25, 28, 155);
+            }
+        </style>
+      </head>
+      <body>
+          <div class="total">
+            <!-- 左边 -->
+            <div class="first fl">
+                <div class="first-in">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </div>
+            <span style="width: 10px;background: rgb(177, 27, 27);height: 100%;position:absolute;left: 100px;"></span>
+            <!-- 右边 -->
+            <div class="third fl">
+                <div class="third-in">
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </div>
+            <a href="javascript:confirm('你确定吗？');">确定</a>
+            <p onclick="javascript:alert('点击')">clickme</p>
+          </div>
+         
+      </body>
+   </html>

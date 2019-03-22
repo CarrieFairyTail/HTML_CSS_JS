@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加载事件</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//jquery对象--->ready()方法，其属于fn的成员
+		//jQuery对象可以调用成员：init(),fn(),extend()
+
+		//$(document).ready(function);
+		$(document).ready(function(){
+			alert(1234);
+		});
+		//$().ready(function);
+		$().ready(function(){
+			console.log('assdd');
+		});
+		//$(function);
+		//该方式是对第一种的封装
+		$(function(){
+			console.log('lkjhhh');
+		})
+	</script>
+</head>
+<body>
+	<h2>hhahahahaha</h2>
+</body>
+</html>

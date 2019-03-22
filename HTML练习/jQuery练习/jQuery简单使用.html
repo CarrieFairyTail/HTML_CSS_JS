@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery简单使用基本选择器</title>
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1(){
+			//获得h2元素节点，并设置css样式
+			//对象.css方法（参数，参数）
+			$('h2').css('color','blue');
+
+			//ajax请求
+			$.get('01.php',function(msg){
+				alert(msg);
+			})
+
+			//基本选择器
+			//1.$(#id属性值)
+			$('#username').css('color','blue');
+
+			//2.$(标签名称)
+			$('h2').css('color','red');
+
+			//3.$('.class属性值')
+			$('.apple').css('color','yellow');
+
+			//4.$('*')通配符选择器(获得页面全部节点)
+			//$('*').css('background-color','#999');
+			
+			//5.$(s1,s2,s3) selector选择器 联合选择器 
+			//把符合s1 s2 s3条件的节点都找到
+			$('h2,#username,.apple').css('background-color','lightgray');
+		}
+	</script>
+</head>
+<body>
+	<h2>jQuery第一次使用</h2>
+	<div id="username">妖精的尾巴洛奇</div>
+	<div class="apple">i have an apple</div>
+	<input type="button" name="change" value="change" onclick="f1()" />
+</body>
+</html>

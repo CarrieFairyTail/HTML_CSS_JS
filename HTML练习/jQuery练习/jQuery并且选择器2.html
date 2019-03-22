@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery并且选择器的复杂用法</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			// :header  可单独使用
+			$(':header').css('color','red');
+			//选择在h中的year
+			$(':header.year').css('color','yellow');
+			//取交集
+			$('li:gt(2):lt(3)').css('color','blue');
+		}
+	</script>
+</head>
+<body>
+	<h1>镇魂</h1>
+	<h2>镇魂街</h2>
+	<h3 class="year">镇魂珠</h3>
+	<h4 class="year">镇魂灯</h4>
+	<ul>
+		<li>辗转一生</li>
+		<li>蓦然回首</li>
+		<li>微微一笑</li>
+		<li id="lea">很倾城</li>
+		<li>忆一世</li>
+		<li class="year">兄弟情</li>
+		<li class="year">戒骄戒躁</li>
+		<li>未来可期</li>
+	</ul>
+	<input type="button" name="" value="change" onclick="f1()">
+</body>
+</html>

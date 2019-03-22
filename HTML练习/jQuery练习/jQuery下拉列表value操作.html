@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉列表value操作</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//获取(被选中下拉列表项目的value值)
+			//适合“单选”的下拉列表
+			//console.log($('option:selected').val());
+
+			//多选 的情况
+			//$(下拉列表).val(); 获得全部被选中的下拉列表项目的value值
+			console.log($('select').val());
+		}
+		function f2(){
+			//设置 北京 上海 选中(单选 多选都可以)
+			//$(下拉列表).val([元素值，元素值。。])
+			$('#city').val(['A','B'])
+		}
+	</script>
+</head>
+<body>
+	城市：<!-- 可以选多个 -->
+	<select id="city" multiple="multiple" style="width: 150px;height: 246px;">
+		<option value="0">请选择</option>
+		<option value="A">北京</option>
+		<option value="B">上海</option>
+		<option value="C">天津</option>
+		<option value="D">启东</option>
+		<option value="E">南京</option>
+	</select>
+	<input type="button" name="" value="获取" onclick="f1()">
+	<input type="button" name="" value="设置" onclick="f2()">
+</body>
+</html>

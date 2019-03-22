@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优化each函数2</title>
+	<style type="text/css">
+		div,p{width: 50px;
+			height: 20px;
+			border: 1px solid blue;
+			margin:10px 0;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<p></p>
+	<p></p>
+</body>
+<script type="text/javascript">
+	var arr = [1,2,3,4,5];
+	//查找 用break只能在循环里使用
+	//利用return返回一个值，返回到each里使用break
+	var each = function(arr,fn){
+		for (var i = 0; i < arr.length; i++) {
+			// var res = fn(i,arr[i]);
+			if (fn(i,arr[i])===false) {
+				break;
+			}
+		}
+	};
+
+	var index = -1;
+	each(arr,function(i,v){
+		if (v===3) {
+			index = i;
+			return false;
+		}
+	});
+	console.log(index);
+
+	//输出的值为Number和jQuery相同
+	//而不是window
+	var arr = [1,2,3,4,5];
+	var each = function(arr,fn){
+		for (var i = 0; i < arr.length; i++) {
+			// var res = fn(i,arr[i]);
+			if (fn.call(arr[i],i,arr[i])===false) {
+				break;
+			}
+		}
+	};
+	each(arr,function(i,v){
+		console.log(this);
+	});
+	
+
+
+</script>
+</html>

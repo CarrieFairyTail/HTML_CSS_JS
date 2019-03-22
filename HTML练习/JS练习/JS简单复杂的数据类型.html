@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单复杂的数据类型</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	//基本类型作为函数的参数
+	//函数内部对参数的修改 不会修改外部的变量
+	function fn(a){
+		a = 100;
+	}
+	var x = 1;
+	fn(x);
+	console.log(x);
+
+	//自定义构造函数
+	function Student(name,sex,weight){
+		this.name = name;
+		this.sex = sex;
+		this.weight = weight;
+	}
+	//复杂类型作为函数的参数
+	//内部的修改会影响外部
+	function fn2(stu){
+		stu.name = "HKL";
+	}
+	var s = new Student("zs",1,199);
+	fn2(s);
+	console.log(s.name);
+
+	function fn3(arr){
+		arr[0] = -100;
+	}
+	var array = [1,22,200];
+	fn3(array);
+	console.log(array);
+</script>
+</html>

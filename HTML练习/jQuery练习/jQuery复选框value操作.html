@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>value复选框</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//获取(被选中复选框的value值)
+			//1.获得全部的被选中复选框元素节点对象
+			//2.遍历全部的复选框
+			//4.如果有选中就获得其value值
+				//$('.hby:checked')
+			var s ="";
+			for (var i = 0; i < $('.hby:checked').length; i++) {
+				//$('.hby:checked:eq('+i+')') 被遍历出来的当前的复选框元素节点
+				//console.log($('.hby:checked:eq('+i+')').val());
+				s += $('.hby:checked:eq('+i+')').val()+","; //把上面的获取在一排
+			}
+			s = s.substr(0,s.length-1);//截取 把最后一个逗号去掉
+			console.log(s);
+		}
+
+		function f2() {
+			//设置 篮球选中
+			//$(全部的复选框).val([元素值，元素值]) 可以设置“value值=元素值 的项目选中”
+			$('.hby').val([1]);
+		}
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hby" name="hobby[]" value="1">篮球
+	<input type="checkbox" class="hby" name="hobby[]" value="2">组曲
+	<input type="checkbox" class="hby" name="hobby[]" value="3">羽毛
+	<input type="checkbox" class="hby" name="hobby[]" value="4">很多
+	<br>
+	<input type="button" name="" value="获取" onclick="f1()">
+	<input type="button" name="" value="设置" onclick="f2()">
+</body>
+</html>

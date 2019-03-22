@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.out{
+			height: 200px;
+			
+			background-color: pink;
+		}
+		.out div{
+			width: 990px;
+			height: 200px;
+			margin: 0 auto;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="out">
+		<div>里面</div>
+	</div>
+</body>
+</html>

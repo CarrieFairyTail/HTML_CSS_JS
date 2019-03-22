@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制平移效果的图形</title>
+<script>
+function draw(id){
+	var canvas = document.getElementById(id);
+	if(canvas==null) return false;
+	var context = canvas.getContext('2d');
+	context.fillStyle="#eeeeff";//小画布的背景颜色
+	context.fillRect(0,0,400,300);//小画布的背景尺寸
+	context.translate(50,50);
+	context.fillStyle='rgba(255,0,0,0.25)';//绘制图形的颜色，透明度
+	for(var i=0;i<50;i++){
+		context.translate(50,50);//和上一个矩形相比的偏差
+		context.fillRect(0,0,50,50);//小矩形
+		}
+	}
+</script>
+</head>
+
+<body onload="draw('canvas');">
+<h1>变换坐标原点</h1>
+<canvas id="canvas" width="800" height="800"/>
+</body>
+</html>

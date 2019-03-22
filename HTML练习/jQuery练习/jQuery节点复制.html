@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点复制</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//mouseover()事件本身有“遍历机制”
+			$('#china li').mouseover(function(){
+				$(this).css('background-color','pink');
+			});
+			$('#china li').mouseout(function(){
+				$(this).css('background-color','blue');
+			})
+		})
+		function f1(){
+			//复制一个哥哥节点给china
+			var fu-gege = $('#gege').clone(false);//只复制节点(没有事件)
+			var fu_gege = $('#gege').clone(true);//复制节点和事件
+			$('#china').append(fu_gege);
+		}
+	</script>
+</head>
+<body>
+	<ul id="china">
+		<li id="long">朱一龙</li>
+		<li id="bai">白宇</li>
+		<li id="liu">刘昊然</li>
+	</ul>
+	<ul id="唇齿上的605">
+		<li id="gege">哥哥</li>
+		<li>紫薇</li>
+		<li>可依</li>
+		<li>引儿</li>
+	</ul>
+	<input type="button" name="" value="复制" onclick="f1()">
+</body>
+</html>

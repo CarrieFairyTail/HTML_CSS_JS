@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>颜色渐变</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			// 隐藏
+			// $().fdeOut([速度，回调函数])
+			// 回调函数：效果呈现完毕会自动调用函数执行
+			$('div').fadeOut(3000);
+		}
+		function f2() {
+			// 显示
+			// $().fadeIn([速度，回调函数])
+			// 回调函数：效果呈现完毕会自动调用函数执行
+			$('div').fadeIn(3000);
+		}
+		function f3() {
+			$('div').fadeToggle(3000);
+			//$('div').toggle(false);
+		}
+	</script>
+	<style type="text/css">
+		div{width: 300px;height: 300px;background-color: blue;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<input type="button" name="" value="fadeOut" onclick="f1()">
+	<input type="button" name="" value="fadeIn" onclick="f2()">
+	<input type="button" name="" value="fadeToggle" onclick="f3()">
+</body>
+</html>

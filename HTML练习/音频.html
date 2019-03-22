@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>音频</title>
+</head>
+
+<body>
+<audio src="login.wav" controls>controls属性：向用户显示控件，比如播放按钮</audio>
+<br>
+<!--通过source属性添加多个音频文件-->
+<audio controls>
+<source src="login.wav" type="audio/ogg"></source>
+<source src="login.wav" type="audio/mpeg"></source>
+</audio>
+<br>
+<br>
+<audio controls autoplay>//自动播放  loop表示循环播放
+<source src="login.wav"></source>
+</audio>
+<br>
+<audio controls preload="auto">//预播放的音频文件     auto当页面加载后载入整个音频
+                                                               meta           只载入元数据
+                                                               none           不载入音频
+<source src="login.wav"></source>
+</audio>
+</body>
+</html>

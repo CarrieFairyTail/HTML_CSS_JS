@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery和dom</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			document.getElementsByTagName('h2')[0].style.backgroundColor = 'pink';
+			//jQuery对象 调用 dom对象的成员【失败】
+			//$('h2').style.backgroundColor = 'lightblue';
+		}
+		function f2(){
+			$('div').css('color','red');
+			//dom对象 调用 jQuery对象的成员[失败]
+			//document.getElementsByTagName('div')[0].css('color','blue');
+		}
+	</script>
+</head>
+<body>
+	<h2>妖精的尾巴</h2>
+	<div>公会一直都在</div>
+	<input type="button" name="" value="Dom" onclick="f1()">
+	<input type="button" name="" value="jQuery" onclick="f2()">
+</body>
+</html>

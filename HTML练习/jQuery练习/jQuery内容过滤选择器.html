@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内容过滤选择器</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//1.contains(text) 包含“你”的div 比较常用
+			$('div:contains(你)').css('color','red');
+			//2.:empty 空节点
+			console.log($('div:empty'));
+			//3.:has(选择器)
+			$('div:has(p)').css('color','blue');
+			//4.:parent
+			console.log($('div:parent'));
+		}
+	</script>
+</head>
+<body>
+	<div>我喜欢<span>你</span></div> <!-- 这里span标签不构成影响 -->
+	<div>他也喜欢</div>
+	<div>wo</div>
+	<div></div>
+	<div><p>hello</p></div>
+	<input type="button" name="" value="change" onclick="f1()">
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制渐变</title>
+</head>
+
+<body>
+<h1>绘制渐变</h1>
+<canvas id="canvas" width="400" height="300" style="border:1px solid red"/>
+
+<script type="text/javascript">
+var c = document.getElementById("canvas");
+var cxt = c.getContext("2d");
+var gradient=cxt.createLinearGradient(0,0,0,canvas.height);//从（0,0）到（0，canvas.height）渐变
+//var gradient=cxt.createRadialGradient(canvas.width/2,canvas.height/2,0,canvas.width/2,canvas.height/2,150);
+//绘制径向渐变
+gradient.addColorStop(0,'#fff');
+gradient.addColorStop(1,'#000');
+cxt.fillStyle = gradient;
+cxt.fillRect(0,0,400,400);
+</script>
+
+</body>
+</html>

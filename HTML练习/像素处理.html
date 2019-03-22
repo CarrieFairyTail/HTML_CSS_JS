@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>像素处理</title>
+<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onLoad="draw('canvas');">
+<h1>像素处理实例</h1>
+<canvas id="canvas" width="400" height="300"></canvas>
+<script>
+function draw(id){
+	var canvas =document.getElementById(id);
+	if(canvas==null){
+		return false;
+		}
+		var context = canvas.getContext('2d');
+		image=new image();
+		image.src="麦田.jpg";
+		image.onload=function(){
+			context.drawImage(image,0,0);
+			var imagedata=context.getImageData(0,0,image.width,image.height);//imagedata对象来保存图像的像素值
+			for(var i=0,n=imagedata.data.length;i<n;i+=4){                  //getImageData方法获取一个ImageData对象
+				imagedata.data[i+0]=255-imagedata.data[i+0];//data属性就是一个连续数组
+				imagedata.data[i+1]=255-imagedata.data[i+2];//在for循环中，对像素值重新赋值
+				imagedata.data[i+2]=255-imagedata.data[i+1];
+				}
+				context.putImageData(imagedata,0,0);//最后用putImageData将处理过的图像在画布上绘制出来
+			};
+}
+</script>
+</body>
+</html>

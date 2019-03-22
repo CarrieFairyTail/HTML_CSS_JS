@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单选按钮</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//获取(被选中的单选框项目的value值)
+			console.log($('.sex:checked').val());
+		}
+
+		function f2() {
+			//设置
+			//$(全部单选按钮).val([元素值])；
+			$('.sex').val(['c']);
+		}
+	</script>
+</head>
+<body>
+	<input type="radio" class="sex"  value="a">男
+	<input type="radio" class="sex"  value="b">女
+	<input type="radio" class="sex"  value="c">保密
+	<br>
+	<input type="button" name="" value="获取" onclick="f1()">
+	<input type="button" name="" value="设置" onclick="f2()">
+</body>
+</html>

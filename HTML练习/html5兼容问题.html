@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>兼容问题</title>
+	<script type="text/javascript">
+		//html5shiv.min.js直接引入
+		//解决了IE对HTML5的兼容问题
+	</script>
+	<!--[if lte IE 8]>
+		这里是内容，IE8可以执行
+		<script src = "">
+		</script>
+	<![endif]-->
+	<style type="text/css">
+		fieldset{
+			width: 500px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	html表单输入类型：<br>
+	<input type="text" name=""><br>
+	<input type="password" name=""><br>
+	<input type="radio" name=""><br>
+	<input type="checkbox" name=""><br>
+	<input type="file" name=""><br>
+	<input type="button" name="" value="按钮"><br>
+	<input type="submit" name=""><br>
+	<input type="reset" name="">
+	<form action="">
+		<fieldset><!-- 画了个框 -->
+			<legend>表单HTML5新增输入类型</legend><!-- 写在框里 -->
+			<label for="email"><!-- 当点击“邮箱”时，输入框也可以输入 -->
+				邮箱：
+				<input type="email" name="email" id="email">
+			</label>
+			<br>
+			电话：<input type="tel" name="tel"><br>
+			网址：<input type="url" name=""><br>
+			数字：<input type="number" name=""><br>
+			查找：<input type="search" name=""><br>
+			范围：<input type="range" name=""><br>
+			颜色：<input type="color" name=""><br>
+			时间：<input type="time" name=""><br>
+			日期：<input type="date" name=""><br>
+			时刻：<input type="datetime" name=""><br>
+			月份：<input type="month" name=""><br>
+			周：<input type="week" name=""><br>
+			<!-- range color time date datetime month week -->
+			<input type="submit" value="提交">
+		</fieldset>
+	</form>
+</body>
+</html>

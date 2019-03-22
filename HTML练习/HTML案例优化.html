@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例优化</title>
+	<style type="text/css">
+		.cont{
+			width: 100px;
+			height: 100px;
+			border: 1px red solid;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="javascript:;" data-cont="local">国内新闻</a>
+		<a href="javascript:;" data-cont="funny">娱乐新闻</a>
+		<a href="javascript:;" data-cont="sports">体育新闻</a>
+		<a href="javascript:;" data-cont="global">国际新闻</a>
+	</nav>
+	<section class="cont" id="local">
+		第一
+	</section>
+	<section class="cont" id="funny">
+		第二
+	</section>
+	<section class="cont" id="sports">
+		第三
+	</section>
+	<section class="cont" id="global">
+		第四
+	</section>
+</body>
+<script type="text/javascript">
+	//(function(){})()
+	(function(key){
+		var navs = document.querySelectorAll('nav a');
+		var active;
+		var cont;
+		for (var i = 0; i < navs.length; i++) {
+			if (i==key) {
+				navs[i].classList.add('active');
+				cont = navs[i].dataset['cont'];
+				document.getElementById(cont).style.display='block';
+			}
+			navs[i].onclick = function(){
+				//获取当前已选中的标签
+				active = document.querySelector('.active');
+				//移除当前选中的表签类
+				active.classList.remove('active');
+				//获取当前已选中的标签对应的内容ID
+				cont = active.dataset['cont'];
+				//将当前已被选中的标签所对应内容隐藏
+				document.getElementById(cont).style.display = 'none';
+				//给当前被点击的标签添加类
+				this.classList.add('active');
+				//给当前被点击的标签添加类
+				cont = this.dataset['cont'];
+				//显示当前被点击的标签对应的内容
+				document.getElementById(cont).style.display = 'block';
+			}
+		}
+	})(3);
+
+</script>
+</html>

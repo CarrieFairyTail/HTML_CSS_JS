@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点替换</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1(){
+			//新节点去替换、已有节点替换
+			$('<li>黄凯莉</li>').replaceAll('#gege');
+			$('#long').replaceWith('<li>居老师</li>');//被动
+		}
+		function f2(){
+			$('#china').empty();//清空对应的子节点
+			$('#gege,#long').remove();//删除匹配的节点
+		}
+	</script>
+</head>
+<body>
+	<ul id="china">
+		<li id="long">朱一龙</li>
+		<li id="bai">白宇</li>
+		<li id="liu">刘昊然</li>
+	</ul>
+	<ul id="唇齿上的605">
+		<li id="gege">哥哥</li>
+		<li>紫薇</li>
+		<li>可依</li>
+		<li>引儿</li>
+	</ul>
+	<input type="button" name="" value="替换" onclick="f1()">
+	<input type="button" name="" value="删除" onclick="f2()">
+</body>
+</html>

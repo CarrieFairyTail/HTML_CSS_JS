@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习表格</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			$('tr:first').css('background-color','yellow');
+			$('tr:gt(0):odd').css('background-color','lightblue');//大于0的偶数为蓝色
+			$('tr:gt(0):even').css('background-color','gray');
+
+
+		function cont(){
+			//通过控制器复选框，控制其他复选框的选中状态(第一个选中其他都选中)
+			var flag = $('#ct1').attr('checked');//判断选中状态
+			$('.goods').attr('checked',flag);//其他复选框状态设置
+		}
+		}
+	</script>
+	<style type="text/css">
+		table{width: 700px;margin: auto;border: 1px solid black;border-collapse: collapse;}
+		td{border: 1px solid black}
+		h2{width: 700px;margin: auto;text-align: center;}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><input type="checkbox" name="" id="ct1" onclick="cont()"></td>
+			<td>序号</td>
+			<td>名称</td>
+			<td>价格</td>
+			<td>数量</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="" class="goods"></td>
+			<td>1</td>
+			<td>Apple</td>
+			<td>100</td>
+			<td>200</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="" class="goods"></td>
+			<td>2</td>
+			<td>orange</td>
+			<td>300</td>
+			<td>400</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="" class="goods"></td>
+			<td>3</td>
+			<td>pear</td>
+			<td>400</td>
+			<td>300</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="" class="goods"></td>
+			<td>4</td>
+			<td>grape</td>
+			<td>900</td>
+			<td>600</td>
+		</tr>
+	</table>
+</body>
+</html>

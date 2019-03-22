@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单域选中选择器</title>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function f1() {
+			//:checked获得被选中的复选框
+			console.log($('.hby:checked'));
+
+			//:checked获得被选中的单选按钮
+			console.log($('.sex:checked'));
+
+			//:selected 获得被选中的下拉列表项目
+			console.log($('option:selected'));
+		}
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hby" name="hobby[]" value="1">篮球
+	<input type="checkbox" class="hby" name="hobby[]" value="2">组曲
+	<input type="checkbox" class="hby" name="hobby[]" value="3">羽毛
+	<input type="checkbox" class="hby" name="hobby[]" value="4">很多
+
+	<input type="radio" class="sex"  value="a">男
+	<input type="radio" class="sex"  value="b">女
+	<input type="radio" class="sex"  value="c">保密
+
+	<hr>
+	城市：
+	<select>
+		<option value="A">北京</option>
+		<option value="B">上海</option>
+	</select>
+	<input type="button" name="" value="change" onclick="f1()">
+</body>
+</html>

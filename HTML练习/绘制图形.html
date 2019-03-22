@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>myfirst0911绘制图形</title>
+</head>
+
+<body>
+今天是2018年9月11日，刚刚下好这个软件，现在开始实践。<br>
+<!--canvas标签表示一个矩形区域-->
+<canvas id="myCanvas" width="700" height="300" style="border:1px solid blue">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+<!--画矩形-->
+var c =document.getElementById("myCanvas");//JS使用ID来寻找canvas元素，获取当前画布对象
+var cxt=c.getContext("2d");//创建context对象
+cxt.fillStyle="rgba(0,0,200,0.7)";//颜色，透明度
+cxt.fillRect(10,20,100,100);//绘制了一个填充的矩形
+
+<!--画圆形-->
+var c1=document.getElementById("myCanvas");
+var cxt1=c1.getContext("2d");
+cxt1.fillStyle="#ffaa00";
+cxt1.beginPath();//开始绘制路径
+cxt1.arc(70,18,15,0,Math.PI*2,true);//圆心坐标，半径，开始结束弧度，画圆的方向
+cxt1.closePath();//结束路径的绘制
+cxt1.fill();//进行填充
+cxt1.stroke();//设置边框
+
+<!--画直线-->
+var c2=document.getElementById("myCanvas");
+var cxt2=c1.getContext("2d");
+cxt2.beginPath();
+cxt2.strokeStyle="rgb(0,182,0)";
+cxt2.moveTo(10,10);//线条的开始点
+cxt2.lineTo(150,100);//线条的目的点
+cxt2.lineTo(10,50);//下一个目点
+cxt2.lineWidth=5;//线条的粗细
+cxt2.stroke();
+cxt2.closePath();
+
+
+</script>
+</body>
+</html>

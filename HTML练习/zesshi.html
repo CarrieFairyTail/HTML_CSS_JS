@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>dataset</title>
+</head>
+<body link = "yellow" vlink = "gray" alink="yellow">
+    <a href="#" style="font-face:'微软雅黑'">这是一个链接</a>
+    <a href="#" style="color:blue;">这是第二个链接</a>
+
+<input type="button" value="按钮" index="10" data-index="10" data-index-color="red">
+<script>
+var oBtn=document.querySelector('input');
+
+console.log(oBtn.dataset);                //DOMStringMap对象
+console.log(oBtn.dataset.index);          //10
+console.log(oBtn.dataset.indexColor);    //red
+console.log(oBtn.index);                //undefined
+
+
+console.log('name' in oBtn.dataset);    //false
+oBtn.dataset.name='zpf';
+console.log('name' in oBtn.dataset);    //true
+oBtn.dataset.index=100;
+console.log(oBtn.dataset.index);        //100
+oBtn.index=20;
+console.log(oBtn.index);                //20
+</script>
+</body>
+</html>

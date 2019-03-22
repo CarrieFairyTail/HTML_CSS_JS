@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 绝对定位会脱离文档流</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap div {
+			width: 200px;
+			height: 200px;
+			border: 5px solid #f00;
+			background: #39f;
+		}
+		.wrap .box {
+			position: absolute;
+			left: 10px;
+			top: 50px;
+			background: #3f9;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">设置了absolute的div元素</div>
+		<div>HTML5布局之路</div>
+	</div>
+</body>
+</html>

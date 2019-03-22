@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>HTML5布局之路 - 新增的input属性</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+	<form method="post" action="demo.php">
+		<p>
+			<label for="">placeholder属性</label>
+			<input type='text' name='' value='' placeholder='请输入密码'/>
+		</p>
+		<p>
+			<label for="">required属性，用于控制是否为必填属性</label>
+			<input type='text' name='' value='' required placeholder='必填'/>
+		</p>
+		<p>
+			<label for="">pattern属性 用于表示正则判断</label>
+			<input type='text' name='' value='' pattern='^[0-9]*$' placeholder='正则判断'/>
+		</p>
+		<p>
+			<label for="">maxlength属性 用于控制最大长度</label>
+			<input type='text' name='' value='' maxlength='10' placeholder='最大长度'/>
+		</p>
+		<p>
+			<label for="">list属性，数据列表</label>
+			<input type='text' name='' value='' list='show_list' placeholder='data列表'/>
+			<datalist id='show_list'>
+				<option lable='name' value='HTML5布局之路'>
+				<option lable='name1' value='HTML5学堂'>
+				<option lable='name2' value='独行冰海'>
+			</datalist>
+		</p>
+		<input type='submit' name='' value='submit'/>
+	</form>
+</body>
+</html>

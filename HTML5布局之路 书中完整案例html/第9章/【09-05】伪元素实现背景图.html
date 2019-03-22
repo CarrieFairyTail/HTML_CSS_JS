@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 伪元素实现背景图</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.menu {
+			width: 200px;
+			height: 191px;
+			padding-left: 197px;
+			border: 2px solid black;
+			font-size: 40px;
+			line-height: 191px;
+		}
+		.menu:before {
+			content: "\200B";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 197px;
+			height: 191px;
+			background: url('../images/menu.png') 0 0 no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">菜单</div>
+</body>
+</html>

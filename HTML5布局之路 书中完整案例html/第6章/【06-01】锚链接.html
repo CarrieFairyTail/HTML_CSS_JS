@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 锚链接</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 400px;
+		}
+		.con {
+			height: 800px;
+			border: 1px solid black;
+		}
+		.nav a {
+			float: left;
+			width: 198px;
+			height: 40px;
+			border: 1px solid #39f;
+			line-height: 40px;
+		}
+		.foot {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">	
+		<div class="nav clearfix">
+			<a href="#foots" title="内部锚链接">内部锚链接</a>
+			<a href="锚链接2.html#foots" title="外部锚链接">外部锚链接</a>
+		</div>
+		<div class="con">锚链接.html文件</div>
+		<div id="foots" class="foot">此处被设置了锚链接，点击顶部的导航能够直接使页面跳转到当前位置</div>
+	</div>
+</body>
+</html>

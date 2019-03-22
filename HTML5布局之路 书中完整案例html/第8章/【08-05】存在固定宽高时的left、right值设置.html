@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 存在固定宽高的left、right设置</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+		}
+		.wrap div {
+			position: absolute;
+			right: 10px;
+			left: 10px;
+			width: 150px;
+			height: 150px;
+			background: #ccc;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div>先设置了right: 10px;<br>再设置了left: 10px;</div>
+	</div>
+</body>
+</html>

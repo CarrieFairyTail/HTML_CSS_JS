@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 基本数据表的实现</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.data td, .data th {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<table class="data">
+		<caption>2016年12月 四年级3班期末考试成绩</caption>
+		<colgroup>
+			<col span="1">
+			<col span="3">
+			<col span="1">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>语文</th>
+				<th>数学</th>
+				<th>英语</th>
+				<th>总分</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>学生姓名1</td>
+				<td>89</td>
+				<td>65</td>
+				<td>77</td>
+				<td>231</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan=5>备注：2016年年底期末考试 整体存在偏科现象</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

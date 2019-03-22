@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 通过三维变形语法触发三维变形</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box1 {
+			width: 150px;
+			height: 150px;
+			border: 2px solid red;
+		}
+	
+		.box1 div {
+			height: 150px;
+			background: rgba(127, 127, 127, 0.4);
+			-webkit-transform: translate3d(30px, 60px, 20px) rotateX(30deg);
+			transform: translate3d(30px, 60px, 20px) rotateX(30deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div></div>
+	</div>
+</body>
+</html>

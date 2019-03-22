@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - transition拆写</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box {
+			width: 150px;
+			height: 150px;
+			border: 5px solid red;
+			background: #39f;
+			transition-property: border-color, background-color, color;
+			transition-duration: .5s, 1.5s, 2.5s;
+			transition-timing-function: ease-in, linear, ease;
+			transition-delay: .1s, .2s, .5s;
+		}
+		.box:hover {
+			color: blue;
+			border: 5px solid black;
+			background: #ccc; 
+		}
+	</style>
+</head>
+<body>
+	<div class="box">HTML5布局之路</div>
+</body>
+</html>

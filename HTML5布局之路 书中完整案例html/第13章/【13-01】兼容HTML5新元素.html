@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 兼容HTML5新元素</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		header, footer, nav, section, aside, details {
+			display: block;
+		}
+	</style>
+	<script>
+		var arr = ['header', 'footer', 'nav', 'section', 'aside', 'details'];
+		for (var i = 0; i < arr.length; i++) {
+			document.createElement(arr[i]);
+		};
+	</script>
+</head>
+<body>
+	<header>此时，在IE8-下可以正常显示</header>
+	<footer>此时，在IE8-下可以正常显示</footer>
+</body>
+</html>

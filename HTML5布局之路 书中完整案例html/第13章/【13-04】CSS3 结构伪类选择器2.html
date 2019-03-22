@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - CSS3结构伪类选择器2</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 500px;
+			height: 40px;
+			padding: 10px;
+		}
+		.wrap dd, .wrap dt {
+			float: left;
+			width: 36px;
+			height: 36px;
+			margin-right: 5px;
+			border: 2px solid black; 
+			background: #ccc;
+			color: #fff;
+			text-align: center;
+			line-height: 36px;
+			font-size: 20px;
+			border-radius: 20px;
+		}
+		/*E:nth-of-type(n)选择器*/
+		.wrap dd:nth-of-type(2n) {
+			background: #39f;
+		}
+		/*E:nth-last-of-type(n)选择器*/
+		.wrap dd:nth-last-of-type(3n) {
+			border: 2px solid red;
+		}	
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<dl class="clearfix">
+			<dd>1</dd>
+			<dt>2</dt>
+			<dd>3</dd>
+			<dd>4</dd>
+			<dt>5</dt>
+			<dt>6</dt>
+			<dd>7</dd>
+			<dd>8</dd>
+			<dt>9</dt>
+			<dd>10</dd>
+		</dl>
+	</div>
+</body>
+</html>

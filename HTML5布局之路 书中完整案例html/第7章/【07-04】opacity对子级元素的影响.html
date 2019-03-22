@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - opacity对子级元素的影响</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box, .noopacity {
+			float: left;
+			width: 150px;
+			height: 150px;
+			margin-right: 10px;
+			border: 5px solid black;
+		}
+		.box {
+			opacity: 0.4;
+		}
+		.box div {
+			opacity: 1;	
+			/* 即便为子元素设置了opacity，也会受到父级元素透明度的影响 */
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		父级元素的文本内容
+		<div>子元素的文本内容</div>
+	</div>
+	<div class="noopacity">
+		父级元素的文本内容
+		<div>子元素的文本内容</div>
+	</div>
+</body>
+</html>

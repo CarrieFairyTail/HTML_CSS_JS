@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 属性选择器</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 500px;
+			height: 40px;
+			padding: 10px;
+		}
+		.wrap li {
+			float: left;
+			width: 36px;
+			height: 36px;
+			margin-right: 5px;
+			border: 2px solid black; 
+			background: #ccc;
+			color: #fff;
+			text-align: center;
+			line-height: 36px;
+			font-size: 20px;
+			border-radius: 20px;
+		}
+		/*E[att^="val"]选择器*/
+		.wrap li[id^="n"] {
+			background: #39f;
+		}
+		/*E[att$="val"]选择器*/
+		.wrap li[id$="n"] {
+			color: green;
+		}
+		/*E[att*="val"]选择器*/
+		.wrap li[id*="n"] {
+			border: 2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="clearfix">
+			<li id="one">1</li>
+			<li id="two">2</li>
+			<li id="three">3</li>
+			<li id="four">4</li>
+			<li id="five">5</li>
+			<li id="six">6</li>
+			<li id="seven">7</li>
+			<li id="eight">8</li>
+			<li id="nine">9</li>
+			<li id="ten">10</li>
+		</ul>
+	</div>
+</body>
+</html>

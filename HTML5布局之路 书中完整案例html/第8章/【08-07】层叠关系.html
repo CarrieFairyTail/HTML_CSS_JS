@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 层叠关系</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			position: relative;
+		}
+		.box1 {
+			position: absolute;
+			top: 50px;
+			z-index: 1;
+			left: 50px;
+			width: 140px;
+			height: 140px;
+			background: #ccc;
+			border: 5px dashed red;
+		}
+		.box2 {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 140px;
+			height: 140px;
+			background: #999;
+			border: 5px dotted black;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

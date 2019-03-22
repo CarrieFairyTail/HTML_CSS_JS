@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 文本超出造成的问题</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 880px;
+			margin: 0 auto;
+			font-size: 14px;
+		}
+		.wrap div {
+			float: left;
+			width: 200px;
+			margin: 0 10px;
+		}
+		.wrap h1 {
+			line-height: 36px;
+			text-align: center;
+		}
+		.wrap p {
+			border: 1px solid #f00;
+			line-height: 20px;
+		}
+		.state1 p, .state3 p {
+			/*不设置具体高度*/
+		}
+		.state2 p, .state4 p {
+			height: 100px;
+			/*设置具体高度*/
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">	
+		<div class="state1">
+			<h1>文字量较小&元素无具体高度</h1>
+			<p>前端要考虑的第二个问题，是文本内容。</p>
+		</div>
+		<div class="state2">
+			<h1>文字量较小&元素设置具体高度</h1>
+			<p>前端要考虑的第二个问题，是文本内容。</p>
+		</div>
+		<div class="state3">
+			<h1>文字量较大&元素无具体高度</h1>
+			<p>前端要考虑的第二个问题，是文本内容。网页当中显示的文字，大部分来源于后台，后台传递过来的文字量有可能小于或大于前端元素能够容纳的文字量，此时，前端也需要进行处理。防止文本量不同时对布局的影响或对其他标签显示效果的影响。</p>
+		</div>
+		<div class="state4">
+			<h1>文字量较大&元素设置具体高度</h1>
+			<p>前端要考虑的第二个问题，是文本内容。网页当中显示的文字，大部分来源于后台，后台传递过来的文字量有可能小于或大于前端元素能够容纳的文字量，此时，前端也需要进行处理。防止文本量不同时对布局的影响或对其他标签显示效果的影响。</p>
+		</div>
+	</div>
+</body>
+</html>

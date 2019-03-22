@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 较为复杂的浮动布局案例</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.common {
+			float: left;
+			width: 200px;
+			height: 200px;
+		}
+		.left {
+			float: left;
+			width: 600px;
+		}
+		.right {
+			float: right;
+			width: 400px;
+		}
+		.left-common {
+			float: left;
+			width: 300px;
+			height: 300px;
+		}
+		.box8 {
+			clear: both;
+			height: 100px;
+		}
+		.box9 {
+			height: 150px;
+		}
+		.box10 {
+			height: 250px;
+		}
+		.box11 {
+			clear: both;
+			height: 80px;	
+		}
+		/* 如下代码只是控制背景颜色，后期会删除，出于代码篇幅考虑，如下代码采用单行形式进行书写 */
+		.box1 {background: #ccc;}
+		.box2 {background: #a9a9a9;}
+		.box3 {background: #ccc;}
+		.box4 {background: #a9a9a9;}
+		.box5 {background: #ccc;}
+		.box6 {background: #999;}
+		.box7 {background: #d9d9d9;}
+		.box8 {background: #ccc;}
+		.box9 {background: #999;}
+		.box10 {background: #a9a9a9;}
+		.box11 {background: #d9d9d9;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="common box1">1</div>
+		<div class="common box2">2</div>
+		<div class="common box3">3</div>
+		<div class="common box4">4</div>
+		<div class="common box5">5</div>
+		<div class="left">
+			<div class="left-common box6">6</div>
+			<div class="left-common box7">7</div>
+			<div class="box8">8</div>
+		</div>
+		<div class="right">
+			<div class="box9">9</div>
+			<div class="box10">10</div>
+		</div>
+		<div class="box11">11</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 伪元素应用 - 多重背景</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.common {
+			position: relative;
+			height: 34px;
+			margin: 20px auto 0;
+			padding: 0 10px;
+			line-height: 34px;
+			background: #eee;			
+		}
+		.common:before {
+			content: "\200B";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 9px;
+			height: 34px;
+			background: url("../images/nav_left.jpg") 0 0 no-repeat;	
+		}
+		.common:after {
+			content: "\200B";
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 9px;
+			height: 34px;
+			background: url("../images/nav_right.jpg") 0 0 no-repeat;	
+		}
+		.menu {
+			width: 280px;
+		}
+		.menu2 {
+			width: 380px;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu common">块的多重背景</div>
+	<div class="menu2 common">块的多重背景</div>
+</body>
+</html>

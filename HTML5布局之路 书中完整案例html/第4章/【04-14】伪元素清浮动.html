@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> HTML5布局之路 – 伪元素清浮动</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			border: 10px solid #000;
+		}
+		.con {
+			float: left;
+			height: 200px;
+			background: #39f;
+		}
+		.wrap:after {
+			content: '\200B';
+			clear: both;
+			display: block;
+			height: 0;
+		}
+		.wrap {
+			*zoom: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="con">类名为wrap的div中的第一个元素</div>
+	</div>
+</body>
+</html>

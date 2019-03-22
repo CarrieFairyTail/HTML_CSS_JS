@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 响应式布局</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body {
+			padding: 5px;
+		}
+		.main div {
+			float: left;
+			height: 200px;
+			margin-bottom: 5px;
+			background: #ccc;
+		}
+		.sidebar {
+			padding: 0 0.5%;
+		}
+		.sidebar li {
+			height: 40px;
+			margin-bottom: 5px;
+			text-align: center;
+			line-height: 40px;
+			background: #f0f0f0;
+		}
+		@media screen and (max-width: 480px) {
+			.main div {
+				width: 49%;
+				margin-left: 0.5%;
+				margin-right: 0.5%;
+			}
+		}
+		@media screen and (min-width: 481px) {
+			.sidebar {
+				float: left;
+				width: 23.5%;
+			}
+			.main {
+				float: right;
+				width: 74.5%;
+			}
+			.main div {
+				width: 49.5%;
+				margin-left: 0.5%;
+			}
+		}
+		@media screen and (min-width: 961px) {
+			.main div {
+				width: 33%;
+				margin-left: 0.33%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="sidebar">
+			<ul>
+				<li>列表内容01</li>
+				<li>列表内容02</li>
+				<li>列表内容03</li>
+				<li>列表内容04</li>
+			</ul>
+		</div>
+		<div class="main clearfix">
+			<div>内容块1</div>
+			<div>内容块2</div>
+			<div>内容块3</div>
+			<div>内容块4</div>
+			<div>内容块5</div>
+			<div>内容块6</div>
+		</div>
+	</div>
+</body>
+</html>

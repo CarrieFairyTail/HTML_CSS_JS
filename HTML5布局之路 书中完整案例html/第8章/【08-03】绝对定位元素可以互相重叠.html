@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 绝对定位元素可以互相重叠</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			position: relative;
+		}
+		.box1 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 150px;
+			height: 150px;
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid black;
+		}
+		.box2 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 100px;
+			background: #39f;		
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">内容块01</div>
+		<div class="box2">内容块02</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 涉及到多级别的定位元素层叠关系</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box1, .box2 {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			margin-bottom: 10px;
+			border: 5px solid black;
+		}
+		.box1 {
+			z-index: 9;
+		}
+		.box2 {
+			z-index: 1;
+		}
+		.box1 div {
+			position: absolute;
+			bottom: -50px;
+			width: 140px;
+			height: 140px;
+			background: #ccc;
+			border: 5px dashed red;
+			z-index: 1;
+		}
+		.box2 div {
+			position: absolute;
+			top: -100px;
+			width: 140px;
+			height: 140px;
+			background: #999;
+			border: 5px dotted black;
+			z-index: 999;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div>第一个box中的绝对定位元素</div>
+	</div>
+	<div class="box2">
+		<div>第二个box中的绝对定位元素</div>
+	</div>
+</body>
+</html>

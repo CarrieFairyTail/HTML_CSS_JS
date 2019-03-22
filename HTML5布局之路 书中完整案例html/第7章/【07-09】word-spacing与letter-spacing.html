@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - word-spacing与letter-spacing</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap div {
+			height: 50px;
+			border: 2px solid black;
+			margin-bottom: 5px;
+		}
+		.word-longer {
+			word-spacing: 2px;
+		}
+		.word-shorter {
+			word-spacing: -2px;
+		}
+		.letter-longer {
+			letter-spacing: 2px;
+		}
+		.letter-shorter {
+			letter-spacing: -2px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">	
+		<div>正常模式：HTML5布局之路 - The road of HTML5 layout.</div>
+		<div class="word-longer">加大word-spacing：HTML5布局之路 - The road of HTML5 layout.</div>
+		<div class="word-shorter">缩小word-spacing：HTML5布局之路 - The road of HTML5 layout.</div>
+		<div class="letter-longer">加大letter-spacing：HTML5布局之路 - The road of HTML5 layout.</div>
+		<div class="letter-shorter">缩小letter-spacing：HTML5布局之路 - The road of HTML5 layout.</div>
+	</div>
+</body>
+</html>

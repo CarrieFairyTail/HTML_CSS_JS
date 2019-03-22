@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 标签选择完成版案例</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/* 整体布局 */
+		.arc-list {
+			width: 676px;
+			padding: 14px 50px;
+		}
+		.arc-con {
+			overflow: hidden;
+		}
+		.arc-list dl {
+			margin-top: -1px;
+			border-top: 1px dotted #ccc;
+		}
+		/* 列表项的模块布局 */
+		.arc-list dt {
+			float: left;
+			width: 152px;
+			height: 152px;
+			padding: 24px;
+		}
+		.arc-list dd {
+			float: right;
+			width: 465px;
+			height: 150px;
+			padding: 25px 0px;
+		}
+		/* 列表项左侧图像 */
+		.arc-list dt a {
+			border: 1px solid #777;
+		}
+		.arc-list dt a, .arc-list img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		/* 列表项右侧标题 */
+		.arc-list h2 {
+			margin-bottom: 22px;
+		}
+		.arc-list dd a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: keep-all;
+			white-space: nowrap;
+			display: block;
+			height: 24px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+		}
+		.arc-list dd a:hover {
+			text-decoration: underline;
+		}
+		/* 列表项右侧分类与发布时间 */
+		.arc-list div {
+			margin-bottom: 16px;
+		}
+		.arc-list span {
+			margin-right: 54px;
+			color: #777;
+		}
+		/* 列表项右侧文章介绍 */
+		.arc-list p {
+			overflow: hidden;
+			height: 72px;
+			line-height: 24px;
+			color: #777;
+		}
+	</style>
+</head>
+<body>
+	<div class="arc-list">
+		<div class="arc-con">
+			<dl class="clearfix">
+				<dt>
+					<a href="#" title=""><img src="images/素材图片 (1).jpg" alt="文章1-配图" title=""></a>
+				</dt>
+				<dd>
+					<h2><a href="#" title="">经典的斐波那契数列与arguments经典的斐波那契数列与arguments.callee</a></h2>
+					<div>
+						<span>2016-08-15</span>
+						<span>文章类别：JavaScript</span>
+					</div>
+					<p>HTML5学堂：经典的斐波那契数列与arguments.callee。提到斐波那契数列，很多人还不是太清楚，但是如果如果提到兔子的繁殖这个经典题目，相信学过计算机语言的人们会感觉很亲切。提到斐波那契数列，很多人还不是太清楚，但是如果如果提到兔子的繁殖这个经典题目，相信学过计算机语言的人们会感觉很亲切。</p>
+				</dd>
+			</dl>
+			<dl class="clearfix">
+				<dt>
+					<a href="#" title=""><img src="images/素材图片 (1).jpg" alt="文章2-配图" title=""></a>
+				</dt>
+				<dd>
+					<h2><a href="#" title="">经典的斐波那契数列与arguments.callee</a></h2>
+					<div>
+						<span>2016-08-15</span>
+						<span>文章类别：JavaScript</span>
+					</div>
+					<p>HTML5学堂：经典的斐波那契数列与arguments.callee。提到斐波那契数列，很多人还不是太清楚，但是如果如果提到兔子的繁殖这个经典题目，相信学过计算机语言的人们会感觉很亲切。提到斐波那契数列，很多人还不是太清楚，但是如果如果提到兔子的繁殖这个经典题目，相信学过计算机语言的人们会感觉很亲切。</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

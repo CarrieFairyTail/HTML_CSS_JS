@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 背景尺寸</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box {
+			float: left;
+			width: 200px;			
+			height: 150px;			
+			margin: 5px;
+			border: 2px solid black;
+			background-image: url('../images/common.jpg');
+			background-repeat: no-repeat;
+		}
+		.cover {
+			background-size: cover;
+		}
+		.contain {
+			background-size: contain;
+		}
+		.perx {
+			background-size: 100%;
+		}
+		.perxy {
+			background-size: 100% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">默认状态</div>
+	<div class="box cover">cover状态</div>
+	<div class="box contain">contain状态</div>
+	<div class="box perx">一个百分比值</div>
+	<div class="box perxy">两个百分比值</div>
+</body>
+</html>

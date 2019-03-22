@@ -1,0 +1,244 @@
+@charset 'utf-8';
+/* 整体布局 */
+html {
+	font-size: 42px;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	max-width: 1080px;
+	height: 330px;
+	box-shadow: 0 4px #666;
+}
+.box {
+	max-width: 1080px;
+	padding-top: 334px;
+}
+.hots {
+	padding: 0 40px;
+	height: 920px;
+}
+.model {
+	padding: 0 40px;
+}
+footer {
+	height: 145px;
+	text-align: center;
+	line-height: 145px;
+}
+/* 顶部导航区域 */
+header {
+	background: #eee;
+}
+nav {
+	width: 1052px;
+	height: 195px;
+	margin: 0 auto;
+	box-shadow: inset 0 -5px #a6a6a6;
+}
+nav span {
+	float: left;
+	width: 121px;
+	height: 121px;
+	padding: 35px 38px;
+}
+nav img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 0 6px #727272;
+	border-radius: 50%;
+}
+nav h1 {
+	float: left;
+	width: 658px;
+	font-size: 72px;
+	text-align: center;
+	line-height: 195px;
+}
+nav strong {
+	float: right;
+	width: 197px;
+	height: 191px;
+	background: url('../images/menu.png') 0 0 no-repeat;
+	background-size: 100%;
+}
+/* 顶部搜索区域 */
+.search div {
+	padding: 16px 31px 19px 27px;
+}
+.search input[type="text"] {
+	float: left;
+	width: 788px;
+	height: 89px;
+	border: 4px solid #303030;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 89px;
+	font-size: 48px;
+	color: #303030;
+}
+.search input[type="submit"] {
+	float: right;
+	width: 179px;
+	height: 80px;
+	margin-top: 4px;
+	padding: 0;
+	border: 4px solid #303030;
+	border-radius: 5px;
+	background: none;
+	text-align: center;
+	line-height: 72px;
+	font-weight: bold;
+	color: #303030;
+}
+.search input[type="text"]:-moz-placeholder {
+	color: #555;
+}
+.search input[type="text"]::-moz-placeholder {
+	color: #000;
+}
+.search input[type="text"]:-ms-input-placeholder {
+	color: #555;
+}
+.search input[type="text"]::-webkit-input-placeholder {
+	color: #555;
+}
+
+
+/* 热门与推荐 */
+.hots > div {
+	height: 122px;
+	padding: 42px 0 0 105px;
+	font-size: 60px;
+	color: #f62828;
+	line-height: 122px;
+	background: url('../images/hots.png') 15px 68px no-repeat;
+	background-size: 55px 60px;
+}
+.hots li {
+	border-bottom: 6px dotted  #666;
+}
+.hots li:last-child {
+	border-bottom: 6px dotted  #fff;	
+}
+.hots li a {
+	position: relative;
+	display: block;
+	height: 100%;
+	padding: 0 156px 0 108px;
+}
+.hots li a:before {
+	content: "\200B";
+	position: absolute;
+	top: 162px;
+	left: 28px;
+	width: 30px;
+	height: 30px;
+	background: #666;
+	border-radius: 50%;
+}
+.hots li a:after {
+	content: "\200B";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 156px;
+	height: 100%;
+	background: url('../images/more.png') 90px center no-repeat;
+	background-size: 25px 40px; 
+}
+.hots h2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+	height: 112px;
+	padding-top: 12px;
+	font-size: 56px;
+	font-weight: bold;
+	line-height: 112px;
+}
+.hots p {
+	overflow: hidden;
+	height: 100px;
+	line-height: 50px;
+}
+.hots li div {
+	height: 42px;
+	margin: 42px 0 58px;
+	padding-left: 67px;
+	line-height: 42px;
+	background: url('../images/love.png') 0 0 no-repeat;
+	background-size: 42px 42px;
+}
+/* 模块部分 */
+.model h2 a {
+	position: relative;
+	display: block;
+	height: 150px;
+	padding: 13px 156px 0 108px;
+	line-height: 150px;
+	font-size: 60px;
+	font-weight: bold;
+	color: #333;
+}
+.model h2 a:before {
+	content: "\200B";
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	width: 66px;
+	height: 72px;
+	background: url('../images/model.png') 0 0 no-repeat;
+	background-size: 66px 72px;
+}
+.model h2 a:after {
+	content: "\200B";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 156px;
+	height: 100%;
+	background: url('../images/more.png') 90px 72px no-repeat;
+	background-size: 25px 40px; 
+}
+.model p {
+	overflow: hidden;
+	height: 180px;
+	margin-top: 6px;
+	padding: 0 44px 0 22px;
+	line-height: 60px;
+	color: #666;
+}
+.model div {
+	height: 580px;
+	margin: 45px 36px 10px 14px;
+	border: 4px solid #000;
+}
+.model img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.model ol {
+	padding: 0 50px 0 33px;
+}
+.model li {
+	border-bottom: 6px dotted #999;
+}
+.model li:last-child {
+	border: none;
+}
+.model li a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+	display: block;
+	height: 152px;
+	line-height: 152px;
+}

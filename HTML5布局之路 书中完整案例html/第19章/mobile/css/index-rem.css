@@ -1,0 +1,247 @@
+@charset 'utf-8';
+/* 整体布局 */
+html {
+	font-size: 42px;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	max-width: 1080px;
+	height: 7.86rem;
+	box-shadow: 0 0.09rem #666; 
+}
+.box {
+	max-width: 1080px;
+	padding-top: 7.86rem;
+}
+.hots {
+	padding: 0 3.7%;
+	height: 21.9rem;
+}
+.model {
+	padding: 0 3.7%;
+	height: 34.76rem;
+}
+footer {
+	height: 3.45rem;
+	text-align: center;
+	line-height: 3.45rem;
+}
+/* 顶部导航区域 */
+header {
+	background: #eee;
+}
+nav {
+	width: 97.33%;
+	height: 4.64rem;
+	margin: 0 auto;
+	box-shadow: inset 0 -0.12rem #a6a6a6;
+}
+nav span {
+	float: left;
+	width: 11.2%;
+	height: 2.88rem;
+	padding: 0.83rem 3.52%;
+}
+nav img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 0 0.14rem #727272;
+	border-radius: 50%;
+}
+nav h1 {
+	float: left;
+	width: 60.93%;
+	font-size: 1.71rem;
+	text-align: center;
+	line-height: 4.64rem;
+}
+nav strong {
+	float: right;
+	width: 18.24%;
+	height: 4.55rem;
+	background: url('../images/menu.png') 0 0 no-repeat;
+	background-size: 100%;
+}
+/* 顶部搜索区域 */
+.search div {
+	padding: 0.38rem 2.87% 0.45rem 2.5%;
+}
+.search input[type="text"] {
+	float: left;
+	width: 77.1%;
+	height: 2.12rem;
+	border: 0.1rem solid #303030;
+	border-radius: 0.24rem;
+	text-align: center;
+	line-height: 2.12rem;
+	font-size: 1.14rem;
+	color: #303030;
+}
+.search input[type="submit"] {
+	float: right;
+	width: 17.51%;
+	height: 1.9rem;
+	margin-top: 0.1rem;
+	padding: 0;
+	border: 0.1rem solid #303030;
+	border-radius: 0.12rem;
+	background: none;
+	text-align: center;
+	line-height: 1.71rem;
+	font-weight: bold;
+	color: #303030;
+}
+.search input[type="text"]:-moz-placeholder {
+	color: #555;
+}
+.search input[type="text"]::-moz-placeholder {
+	color: #000;
+}
+.search input[type="text"]:-ms-input-placeholder {
+	color: #555;
+}
+.search input[type="text"]::-webkit-input-placeholder {
+	color: #555;
+}
+/* 热门与推荐 */
+.hots > div {
+	height: 2.9rem;
+	padding: 1rem 0 0 10.5%;
+	font-size: 1.43rem;
+	color: #f62828;
+	line-height: 2.9rem;
+	background: url('../images/hots.png') 0.36rem 1.62rem no-repeat;
+	background-size: 1.31rem 1.43rem;
+	/*父级宽度为1000像素*/
+}
+.hots li {
+	border-bottom: 0.14rem dotted  #666;
+}
+.hots li:last-child {
+	border-bottom: 0.14rem dotted  #fff;	
+}
+.hots li a {
+	position: relative;
+	display: block;
+	height: 100%;
+	padding: 0 15.6% 0 10.8%;
+	/* 父级宽度为1000像素 */
+}
+.hots li a:before {
+	content: "\200B";
+	position: absolute;
+	top: 3.86rem;
+	left: 2.8%;
+	width: 3%;
+	height: 0.71rem;
+	background: #666;
+	border-radius: 50%;
+	/* 父级宽度为1000像素 */
+}
+.hots li a:after {
+	content: "\200B";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15.6%;
+	height: 100%;
+	background: url('../images/more.png') 2.14rem center no-repeat;
+	background-size: 0.6rem 0.95rem; 
+}
+.hots h2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+	height: 2.67rem;
+	padding-top: 0.29rem;
+	font-size: 1.33rem;
+	font-weight: bold;
+	line-height: 2.67rem;
+}
+.hots p {
+	overflow: hidden;
+	height: 2.38rem;
+	line-height: 1.19rem;
+}
+.hots li div {
+	height: 1rem;
+	margin: 1rem 0 1.38rem;
+	padding-left: 9.1%;
+	line-height: 1rem;
+	background: url('../images/love.png') 0 0 no-repeat;
+	background-size: 1rem 1rem;
+	/*父级宽度为736像素*/
+}
+/* 模块部分 */
+.model h2 a {
+	position: relative;
+	display: block;
+	height: 3.57rem;
+	padding: 0.31rem 15.6% 0 10.8%;
+	line-height: 3.57rem;
+	font-size: 1.43rem;
+	font-weight: bold;
+	color: #333;
+}
+.model h2 a:before {
+	content: "\200B";
+	position: absolute;
+	top: 1.19rem;
+	left: 1%;
+	width: 6.6%;
+	height: 1.71rem;
+	background: url('../images/model.png') 0 0 no-repeat;
+	background-size: 1.57rem 1.71rem;
+}
+.model h2 a:after {
+	content: "\200B";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3.71rem;
+	height: 100%;
+	background: url('../images/more.png') 2.14rem 1.71rem no-repeat;
+	background-size: 0.6rem 0.95rem; 
+}
+.model p {
+	overflow: hidden;
+	height: 4.29rem;
+	margin-top: 0.14rem;
+	padding: 0 4.4% 0 2.2%;
+	line-height: 1.43rem;
+	color: #666;
+}
+.model div {
+	height: 13.81rem;
+	margin: 1.07rem 3.6% 0.24rem 1.4%;
+	border: 0.1rem solid #000;
+}
+.model img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.model ol {
+	padding: 0 5% 0 3.3%;
+}
+.model li {
+	border-bottom: 0.14rem dotted #999;
+}
+.model li:last-child {
+	border: none;
+}
+.model li a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	white-space: nowrap;
+	display: block;
+	height: 3.62rem;
+	line-height: 3.62rem;
+}

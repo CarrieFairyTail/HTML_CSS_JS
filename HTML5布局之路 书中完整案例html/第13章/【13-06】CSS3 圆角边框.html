@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - CSS3圆角边框</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap div {
+			float: left;
+			width: 80px;
+			height: 80px;
+			margin: 10px;
+			background: #d5d2c1;
+			line-height: 80px;
+			text-align: center;
+			font-weight: bold;
+		}
+		.box1 {
+			border-radius:10px;
+		}
+		.box2 {
+			border-radius: 10px 25px;
+		}
+		.box3 {
+			border-radius: 5px 25px 0;
+		}
+		.box4 {
+			border-radius: 40px 0 10px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class='box1'>A</div>
+		<div class='box2'>B</div>
+		<div class='box3'>C</div>
+		<div class='box4'>D</div>
+	</div>
+</body>
+</html>

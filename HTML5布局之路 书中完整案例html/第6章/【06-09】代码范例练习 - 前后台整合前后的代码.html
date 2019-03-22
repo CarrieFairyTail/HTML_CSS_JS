@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 标签选择</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.arc-list {
+			width: 676px;
+			padding: 14px 50px;
+		}
+		.arc-list dl {
+			border-bottom: 1px dotted #ccc;
+		}
+		.arc-list dt {
+			float: left;
+			width: 152px;
+			height: 152px;
+			padding: 24px;
+		}
+		.arc-list img {
+			/*display: block;*/
+			border: 1px solid #777;
+		}
+		.arc-list dd {
+			float: right;
+			width: 465px;
+			height: 150px;
+			padding: 25px 0px;
+		}
+		.arc-list h2 {
+			margin-bottom: 22px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+		}
+		.arc-list div {
+			margin-bottom: 16px;
+		}
+		.arc-list span {
+			margin-right: 54px;
+			color: #777;
+		}
+		.arc-list p {
+			height: 72px;
+			line-height: 24px;
+			color: #777;
+		}
+	</style>
+</head>
+
+<body>
+	<?php
+		$conn = mysql_connect("localhost", "root", "");
+		mysql_query("SET NAMES 'utf8'");
+		mysql_select_db("html5road");
+	?>
+	<div class="arc-list">
+		<?php  
+			$sql = mysql_query("SELECT * FROM listdata LIMIT 0, 5");
+			while ($arr = mysql_fetch_assoc($sql)) {
+		?>
+		<dl class="clearfix">
+			<dt>
+				<a href="arc.php?aid=<?php echo $arr['id'] ?>" title="<?php echo $arr['title']; ?>">
+					<img src="<?php echo $arr['pic']; ?>" alt="<?php echo $arr['title']; ?>">
+				</a>
+			</dt>
+			<dd>
+				<h2><a href="arc.php?aid=<?php echo $arr['id'] ?>" title="<?php echo $arr['title']; ?>"><?php echo $arr['title']; ?></a></h2>
+				<div>
+					<span><?php echo $arr['data']; ?></span>
+					<span>文章类别：<?php echo $arr['kinds']; ?></span>
+				</div>
+				<p><?php echo $arr['inf']; ?></p>
+			</dd>
+		</dl>
+		<?php } ?>
+	</div>
+</body>
+
+<body>
+	<div class="arc-list">
+		<dl class="clearfix">
+			<dt>
+				<a href="#" title=""><img src="images/素材图片 (1).jpg" alt="文章1-配图" title=""></a>
+			</dt>
+			<dd>
+				<h2><a href="#" title="">经典的斐波那契数列与arguments.callee</a></h2>
+				<div>
+					<span>2016-08-15</span>
+					<span>文章类别：JavaScript</span>
+				</div>
+				<p>HTML5学堂：经典的斐波那契数列与arguments.callee。提到斐波那契数列，很多人还不是太清楚，但是如果如果提到兔子的繁殖这个经典题目，相信学过计算机语言的人们会感觉很亲切。</p>
+			</dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>
+				<img src="images/素材图片 (2).jpg" alt="文章2-配图" title="">
+			</dt>
+			<dd>
+				<h2>WEBP格式的图片</h2>
+				<div>
+					<span>2016-07-30</span>
+					<span>文章类别：JavaScript</span>
+				</div>
+				<p>HTML5学堂：谷歌于2010年推出的新一代图片格式 —— WEBP，随着移动互联网的发展，WEBP格式在2015年逐渐的开始被大公司部分采用。</p>
+			</dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>
+				<img src="images/素材图片 (3).jpg" alt="文章3-配图" title="">
+			</dt>
+			<dd>
+				<h2>使用Git多人协作，完成项目开发</h2>
+				<div>
+					<span>2016-07-10</span>
+					<span>文章类别：工具类文件</span>
+				</div>
+				<p>HTML5学堂：关于Git的知识，我们共分成了四个大步骤进行讲解，之前我们提到了Git的安装与配置、Git在本地的使用方法，如何创建Git本地仓库与服务器端仓库的关系。</p>
+			</dd>
+		</dl>
+	</div>
+</body>
+</html>

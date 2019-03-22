@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 盒阴影有可能被背景所覆盖</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.self div {
+			width: 200px;
+			height: 100px;
+			margin: 10px;
+			border: 2px solid black;
+			box-shadow: 0px 0px 0px 10px #39f inset;
+		}
+		.self .box2 {
+			background: #ccc;
+			box-shadow: 0px 0px 0px 10px #39f inset;
+		}
+		.sibling {
+			width: 612px;
+			padding: 10px;			
+		}
+		.sibling div {
+			float: left;
+			width: 200px;
+			height: 100px;
+			border: 2px solid black;
+		}
+		.sibling .box1 {
+			box-shadow: 0px 0px 0px 10px #39f;
+		}
+		.sibling .box2 {
+			background: #ccc;
+		}
+		.parent {
+			overflow: hidden;
+			width: 200px;
+			margin: 10px;
+			border: 2px solid black;
+		}
+		.parent div {
+			width: 200px;
+			height: 100px;			
+			box-shadow: 0px 0px 0px 10px #39f;			
+		}
+	</style>
+</head>
+<body>
+	<div class="self">	
+		<div class="box1">内阴影，无背景色</div>
+		<div class="box2">内阴影，设置了背景色</div>
+	</div>
+	<div class="sibling clearfix">
+		<div>没有设置背景颜色的兄弟级元素</div>
+		<div class="box1">该元素设置了外阴影</div>
+		<div>没有设置背景颜色的兄弟级元素</div>
+		<div class="box2">设置背景颜色的兄弟级元素</div>
+		<div class="box1">该元素设置了外阴影</div>
+		<div class="box2">设置背景颜色的兄弟级元素</div>
+	</div>
+	<div class="parent">
+		<div>子元素设置了外阴影，父元素设置overflow: hidden;</div>
+	</div>
+</body>
+</html>

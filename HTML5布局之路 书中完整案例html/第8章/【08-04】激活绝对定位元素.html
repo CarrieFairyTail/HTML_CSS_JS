@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 激活绝对定位元素</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 5px solid black;
+		}
+		.box1 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 150px;
+			height: 150px;
+			border: 1px solid black;
+		}
+		.box2 {
+			position: absolute;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			background: #39f;		
+		}
+		.box3 {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">内容块01</div>
+		<div class="box2">内容块02</div>
+		<div class="box3">内容块03</div>
+	</div>
+</body>
+</html>

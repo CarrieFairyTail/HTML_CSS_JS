@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 伪元素转换成块元素</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.bookname {
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+			border: 2px solid black;
+		}
+		.bookname:before {
+			content: "\200B";
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: #39f;
+		}
+		.bookname:after {
+			content: "\200B";
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="bookname"></div>
+</body>
+</html>

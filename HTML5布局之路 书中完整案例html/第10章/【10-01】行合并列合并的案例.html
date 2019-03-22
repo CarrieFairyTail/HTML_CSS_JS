@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 行列合并的表格实例</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.data td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<table class="data">
+		<tbody>
+			<tr>
+				<td>第1行 第1列</td>
+				<td>第1行 第2列</td>
+				<td>第1行 第3列</td>
+				<td>第1行 第4列</td>
+				<td>第1行 第5列</td>
+			</tr>
+			<tr>
+				<td>第2行 第1列</td>
+				<td rowspan=2 colspan=3>合并的单元格</td>
+				<td>第2行 第5列</td>
+			</tr>
+			<tr>
+				<td>第3行 第1列</td>
+				<td>第3行 第5列</td>
+			</tr>
+			<tr>
+				<td>第4行 第1列</td>
+				<td>第4行 第2列</td>
+				<td>第4行 第3列</td>
+				<td>第4行 第4列</td>
+				<td>第4行 第5列</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

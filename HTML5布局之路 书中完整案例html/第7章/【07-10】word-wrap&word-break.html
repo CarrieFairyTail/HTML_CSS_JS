@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - word-wrap&word-break</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.common {
+			width: 300px;
+			margin-bottom: 5px;
+			border: 1px solid red;
+		}
+		.word-b {
+			word-break: break-all;
+		}
+		.word-w {
+			word-wrap: break-word;
+		}
+	</style>
+</head>
+<body>
+	<div class="common">正常的显示效果：《HTML5布局之路》的作者也是HTML5学堂的创始人。http://www.h5course.com</div>
+	<div class="common">yidachuangdeyingwenzimuhaimeiyoubanfabeiqufenkai</div>
+	<div class="common word-b">word-break: break-all; 截断的显示效果：《HTML5布局之路》的作者也是HTML5学堂的创始人。http://www.h5course.com</div>
+	<div class="common word-b">word-break: break-all; yidachuangdeyingwenzimuhaimeiyoubanfabeiqufenkai</div>
+	<div class="common word-w">word-wrap: break-word; 截断的显示效果：《HTML5布局之路》的作者也是HTML5学堂的创始人。http://www.h5course.com</div>
+	<div class="common word-w">word-wrap: break-word; yidachuangdeyingwenzimuhaimeiyoubanfabeiqufenkai</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 – 浮动功能案例3</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 600px;
+			border: 5px solid black;
+		}
+		.box1 {
+			float: left;
+			width: 150px;
+			height: 150px;
+			background: #999;
+			/* 如下三行代码只是为了便于查看效果 */
+			font-size: 40px;
+			text-align: center;
+			line-height: 150px;
+		}
+		.box2 {
+			float: left;
+			width: 150px;
+			height: 300px;
+			background: #ccc;
+			/* 如下三行代码只是为了便于查看效果 */
+			font-size: 40px;
+			text-align: center;
+			line-height: 300px;
+		}
+		.box3 {
+			float: right;
+			width: 150px;
+			height: 150px;
+			background: blue;
+			/* 如下三行代码只是为了便于查看效果 */
+			font-size: 40px;
+			text-align: center;
+			line-height: 150px;
+		}
+		.box4 {
+			float: right;
+			width: 150px;
+			height: 200px;
+			background: yellow;
+			/* 如下三行代码只是为了便于查看效果 */
+			font-size: 40px;
+			text-align: center;
+			line-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap clearfix">	
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</div>
+</body>
+</html>

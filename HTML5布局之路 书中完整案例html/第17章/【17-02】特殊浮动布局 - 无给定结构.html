@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 无给定结构的特殊浮动布局</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrap {
+			width: 200px;
+			border: 2px solid red;
+			margin: 20px;
+		}
+		.first {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+		.second {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: #39f;
+		}
+		.third {
+			float: right;
+			width: 100px;
+			height: 200px;
+			background: #f0f0f0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap clearfix">
+		<div class="first">1</div>
+		<div class="third">3</div>
+		<div class="second">2</div>
+	</div>
+</body>
+</html>

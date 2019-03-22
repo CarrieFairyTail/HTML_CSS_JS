@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - 毗邻选择器</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.con + p {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">类名为con的div元素</div>
+	<p>在类名为con的div元素 后面的 第一个p元素</p>
+	<p>在类名为con的div元素 后面的 第二个p元素</p>
+	<div class="con">类名为con的第二个div元素</div>
+	<h1>在类名为con后面，但是是h1元素</h1>
+	<div class="con">
+		<p>存在于类名为con元素内部的子元素，p元素</p>
+	</div>
+</body>
+</html>

@@ -1,2 +1,2 @@
 # Text
-HTML+Css+Js练习
+HTML+CSS+JS
